@@ -1,4 +1,5 @@
 import logging
+
 from core.logger.logging_filters import RequestIdFilter
 
 logging.basicConfig(

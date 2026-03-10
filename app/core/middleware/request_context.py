@@ -1,11 +1,10 @@
-from contextvars import ContextVar
 import uuid
+from contextvars import ContextVar
+
 from fastapi import Request
 from starlette.middleware.base import BaseHTTPMiddleware
 
-
 request_id_ctx = ContextVar("request_id", default=None)
-
 
 
 class RequestIDMiddleware(BaseHTTPMiddleware):

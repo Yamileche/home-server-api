@@ -1,10 +1,11 @@
 # middleware/request_metrics.py
 
-import time
 import asyncio
-from starlette.middleware.base import BaseHTTPMiddleware
-from fastapi import Request
+import time
+
 from core.middleware.request_context import request_id_ctx
+from fastapi import Request
+from starlette.middleware.base import BaseHTTPMiddleware
 
 
 async def save_metrics(data: dict):

@@ -1,12 +1,12 @@
-from core.logger import logger
-from fastapi import FastAPI
+from core.handlers.exception_handlers import global_exception_handler
 from core.logger import logger
 from core.middleware.request_context import RequestIDMiddleware
 from core.middleware.request_metrics import RequestMetricsMiddleware
-from core.handlers.exception_handlers import global_exception_handler
+from fastapi import FastAPI
 from routes import users
 
 app = FastAPI()
+
 
 @app.get("/")
 async def root():

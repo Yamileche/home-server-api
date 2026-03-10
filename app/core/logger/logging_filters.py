@@ -1,5 +1,7 @@
 import logging
+
 from core.middleware.request_context import request_id_ctx
+
 
 class RequestIdFilter(logging.Filter):
     def filter(self, record):

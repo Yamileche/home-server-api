@@ -1,6 +1,7 @@
 # core/error_models.py
 from datetime import datetime
 
+
 def build_error_payload(request, exc, request_id):
     return {
         "request_id": request_id,
